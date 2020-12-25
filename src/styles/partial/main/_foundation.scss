@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+// $bg-light: '#eee';
+// $bg-dark: '#1c1c1c';
+
+// $themes: (
+//   default: (
+//     // logo: url("../images/brand/logo_vertical.svg"),
+//     bg: $bg-light,
+//     // card-bg: $bg--card--light,
+//     // text: $text--light,
+//     // text-secondary: $text--2--light,
+//     // link: $brand--blue--light,
+//     // hover: $hover--light,
+//     // border: $border--light
+//   ),
+//   dark: (
+//     // logo: url("../images/brand/logo_vertical--invert.svg"),
+//     bg: $bg-dark,
+//     // card-bg: $bg--card--dark,
+//     // text: $text--dark,
+//     // text-secondary: $text--2--dark,
+//     // link: $brand--blue--dark,
+//     // hover: $hover--dark,
+//     // border: $border--dark
+//   ),
+// );
+// overflow-y: auto;
+
+body {
+  font-family: 'Nunito Sans', 'Noto Sans Japanese', serif;
+  font-size: 16px;
+  // color: #ccc;
+
+  // background-color: #1c1c1c;
+  // background-image: linear-gradient(rgba(255, 255, 255, 0.08) 0px, transparent 1px),
+  // linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0px, transparent 1px),
+  // linear-gradient(rgba(255, 255, 255, 0.04) 0px, transparent 1px),
+  // linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0px, transparent 1px);
+
+  background-color: #f6f6f6;
+  background-image: linear-gradient(rgba(0, 0, 0, .08) 0, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, .08) 0, transparent 1px),
+    linear-gradient(rgba(0, 0, 0, .04) 0, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, .04) 0, transparent 1px);
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+}
+
+a {
+  color: #e39777;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    // color: #999;
+    // background-color: #1c1c1c;
+    color: 333;
+  }
+
+  a {
+    color: #e39777;
+  }
+
+  img {
+    filter: grayscale(30%);
+  }
+}

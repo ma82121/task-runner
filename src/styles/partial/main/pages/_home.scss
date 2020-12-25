@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.home {
+  width: var(--cube-size);
+
+  .pinkball {
+    @include sprite2($pinkball-1);
+  }
+}

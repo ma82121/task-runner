@@ -1,0 +1,6 @@
+.DS_Store
+
+coverage
+dist
+firebase/public
+node_modules

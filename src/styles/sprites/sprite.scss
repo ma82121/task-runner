@@ -1,0 +1,26 @@
+@mixin sprite2-width($sprite) {
+  width: nth($sprite, 5)/2;
+}
+
+@mixin sprite2-height($sprite) {
+  height: nth($sprite, 6)/2;
+}
+
+@mixin sprite2-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3)/2;
+  $sprite-offset-y: nth($sprite, 4)/2;
+
+  background-position: $sprite-offset-x $sprite-offset-y;
+}
+
+@mixin sprite2-size($sprite) {
+  background-size: nth($sprite, 7)/2 nth($sprite, 8)/2;
+}
+
+@mixin sprite2($sprite) {
+  @include sprite-image($sprite);
+  @include sprite2-position($sprite);
+  @include sprite2-width($sprite);
+  @include sprite2-height($sprite);
+  @include sprite2-size($sprite);
+}

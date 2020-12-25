@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/**
+ * Reset
+ */
+// @import "../../node_modules/normalize.css/normalize.css";
+
+/**
+ * Flame Work
+ */
+@import "../../node_modules/bulma/bulma.sass";
+
+/**
+ * Web Font
+ */
+@import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
+/**
+ * Partial
+ */
+@import "partial/dev/**/*.scss";
