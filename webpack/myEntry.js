@@ -16,10 +16,9 @@ const srcDir = 'src/scripts'
 let minimatch = '**/app.js'
 
 module.exports = targetPath => {
-  // console.log('targetPath')
-  // console.log(targetPath)
-  // console.log(targetPath.match('app.js'))
-  // console.log(typeof targetPath)
+  console.log('targetPath')
+  console.log(targetPath)
+  console.log(typeof targetPath)
 
   if (typeof targetPath === 'string') {
     if (targetPath.match('app.js')) {
@@ -38,7 +37,7 @@ module.exports = targetPath => {
       cwd: srcDir
     })
     .map(key => {
-      const newKey = key.replace('.js', '').replace('main/', '')
+      const newKey = key.replace('.js', '')
       entry[newKey] = path.resolve(srcDir, key)
     })
 

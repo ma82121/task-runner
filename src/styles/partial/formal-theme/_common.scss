@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.formal-theme {
+  body {
+    font-family: 'Nunito Sans', 'Noto Sans Japanese', serif;
+    font-size: 16px;
+    color: #222;
+    background-color: #f6f6f6;
+    background-image: linear-gradient(rgba(0, 0, 0, .08) 0, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, .08) 0, transparent 1px),
+      linear-gradient(rgba(0, 0, 0, .04) 0, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, .04) 0, transparent 1px);
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  }
+}

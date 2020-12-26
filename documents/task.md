@@ -3,18 +3,18 @@
 ## html
 
 - pugの利用可
-- 圧縮
+- HTMLコードの圧縮
 
-`./src/documents`直下に
-この中にカテゴリ毎にディレクトリを生成し、その中に`HTML`か`PUG`形式で格納  
-共通テンプレートは`_template`のように_から始まるディレクトリ名の中に格納する
+`./src/html`内に`HTML`か`PUG`形式で格納  
+共通テンプレートは`_template`のように`_`から始まるディレクトリ名の中に格納する
 
-URLはdocuments以下のpathと同じだが、
-mainに限り省略
+URLはhtmls以下のpathと同じ想定
 
 ex)
-./src/documents/main/index.pug -> アドレスバーから/または/index.htmlでアクセス可
-./src/documents/dev/index.pug -> アドレスバーから/dev/または/dev/index.htmlでアクセス可
+./src/htmls/index.html -> アドレスバーより/または/index.htmlでアクセス可
+./src/htmls/about.html -> アドレスバーより/about.htmlでアクセス可
+./src/htmls/mailform/index.pug -> アドレスバーから/dev/または/dev/index.htmlでアクセス可
+./src/htmls/mailform/index.pug -> アドレスバーから/dev/または/dev/index.htmlでアクセス可
 
 ## image
 

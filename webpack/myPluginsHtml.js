@@ -47,7 +47,6 @@ htmlList.forEach(document => {
     'entries/' +
     document
       .replace('./src/htmls/', '')
-      .replace('main/', '')
       .replace('.pug', '')
       .replace('.html', '') +
     '/app'
