@@ -6,9 +6,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
-const envConfigCommon = require('./env.config.common.js')
-const envConfigDev = require('./env.config.dev.js')
-const envConfigProd = require('./env.config.prod.js')
+const envConfigCommon = require('../env/common.js')
+const envConfigDev = require('../env/dev.js')
+const envConfigProd = require('../env/prod.js')
 
 const myPluginsHtml = require('./myPluginsHtml.js')
 

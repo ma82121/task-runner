@@ -13,7 +13,3 @@
 | Sprite/SpriteSheet生成 | yarn sprite | - |
 
 [INDEX](../index.md)
-
-yarn dev --env.PATH=entries/dungeon
-yarn dev --env.PATH=entries/dungeon/dev/tilemap/app.js
-yarn dev --env.PATH=entries/dungeon/dev/viewer/app.js

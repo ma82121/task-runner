@@ -1,7 +1,7 @@
 # 改修方針
 
 - Webpackに丸投げ
-- SpriteSheet生成など、ごく一部はnpm scripts。監視状態の処理はtasks以下に書く
+- SpriteSheet生成など、ごく一部はnpm scripts
 - タスクの設定ファイルは下記の優先順位で配置する
   1. package.json（その分ファイル数を減らせるため）
   2. configディレクトリに外部JSファイル（コメントアウトが使えるため）

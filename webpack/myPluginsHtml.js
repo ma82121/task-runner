@@ -1,55 +1,58 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
-const html = []
-
-// Main
-// new HtmlWebpackPlugin({
-//   filename: 'index.html',
-//   chunks: ['entries/index/app'],
-//   template: 'src/documents/index.pug'
-// }),
-// Main
-// new HtmlWebpackPlugin({
-//   filename: 'index.html',
-//   chunks: ['entries/index/app'],
-//   template: 'src/documents/main/index.pug'
-// }),
-// Main以外
-// new HtmlWebpackPlugin({
-//   filename: 'three/dungeon.html',
-//   chunks: ['entries/three/dungeon/app'],
-//   template: 'src/documents/three/dungeon.html'
-// }),
-
 const globule = require('globule')
 
-const documents = globule.find(
-  ['./src/documents/**/*.pug', './src/documents/**/*.html'],
+// 対象のhtml、pugファイルのpathを抽出
+const htmlList = globule.find(
+  [
+    './src/htmls/**/*.pug',
+    './src/htmls/**/*.html'
+  ],
   {
     ignore: [
-      './src/documents/**/_*/*.pug',
-      './src/documents/**/_*.pug',
-      './src/documents/**/_*/*.html',
-      './src/documents/**/_*.html'
+      './src/htmls/**/_*/*.pug',
+      './src/htmls/**/_*.pug',
+      './src/htmls/**/_*/*.html',
+      './src/htmls/**/_*.html'
     ]
   }
 )
-documents.forEach(document => {
+
+// 抽出分のHtmlWebpackPluginのインスタンスを生成
+// ex
+// new HtmlWebpackPlugin({
+//   filename: 'index.html',
+//   chunks: ['entries/index/app'],
+//   template: 'src/html/index.pug'
+// }),
+// new HtmlWebpackPlugin({
+//   filename: 'index.html',
+//   chunks: ['entries/index/app'],
+//   template: 'src/html/main/index.pug'
+// }),
+// new HtmlWebpackPlugin({
+//   filename: 'three/dungeon.html',
+//   chunks: ['entries/three/dungeon/app'],
+//   template: 'src/html/three/dungeon.html'
+// }),
+
+const returnArray = []
+
+htmlList.forEach(document => {
   const fileName = document
-    .replace('./src/documents/', '')
+    .replace('./src/htmls/', '')
     .replace('main/', '')
     .replace('.pug', '.html')
 
   const chunks =
     'entries/' +
     document
-      .replace('./src/documents/', '')
+      .replace('./src/htmls/', '')
       .replace('main/', '')
       .replace('.pug', '')
       .replace('.html', '') +
     '/app'
 
-  html.push(
+  returnArray.push(
     new HtmlWebpackPlugin({
       filename: `${fileName}`,
       chunks: [`${chunks}`],
@@ -61,4 +64,4 @@ documents.forEach(document => {
   // console.log(document)
 })
 
-module.exports = html
+module.exports = returnArray
